@@ -110,7 +110,7 @@ private TrieNode searchPrefix(String word) {
             }
         }
  
-       if(node == root)
+       if(node == root)  // < --- This check is for handling the case when the input word is empty string
             return null;
  
        return node;
