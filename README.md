@@ -124,7 +124,19 @@ We define a helper method `searchPrefix()` which tells whether the prefix exists
 
 Note that `searchPrefix()` returns a `TrieNode` if prefix exists and null otherwise. By defining the `searchPrefix()` we can use it in both `search()` and `startsWith()` without any code duplication. 
 
-So the `search()` method calls the `searchPrefix()` method and if returned `TrieNode` is not null and also if that `TrieNode` marks the end of a word, we return true from the search method and false oherwise.
+So the `search()` method calls the `searchPrefix()` method and if it returns `TrieNode` which is not null and also if that `TrieNode` marks the end of a word, we return true from the search method and false oherwise.
+
+### Implementing startsWith(String) :
+
+For `startsWith()` we just have to check, is the prefix exists in the `Trie`, the `TrieNode` doesn't have to be the end, so no need for 
+`isEnd` check.
+
+```java
+public boolean startsWith(String prefix) {
+       TrieNode node = searchPrefix(prefix);
+       return node != null;
+}
+```
 
 ## Implementation :
 
