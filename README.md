@@ -1,2 +1,1 @@
-# implement-trie
-Trie Implementation
+# Trie Implementation
