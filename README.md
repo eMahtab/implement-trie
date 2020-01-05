@@ -116,6 +116,15 @@ private TrieNode searchPrefix(String word) {
        return node;
 }
 ```
+Since we need two search functionalities for the Trie, one to tell whether the word exist in the Trie and another if a given prefix exists in the Trie.
+
+We define a helper method `searchPrefix()` which tells whether the prefix exists in the Trie or not. 
+
+**💥 👀 💥**
+
+Note that `searchPrefix()` returns a `TrieNode` if prefix exists and null otherwise. By defining the `searchPrefix()` we can use it in both `search()` and `startsWith()` without any code duplication. 
+
+So the `search()` method calls the `searchPrefix()` method and if returned `TrieNode` is not null and also if that `TrieNode` marks the end of a word, we return true from the search method and false oherwise.
 
 ## Implementation :
 
