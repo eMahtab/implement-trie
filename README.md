@@ -61,6 +61,12 @@ public class Trie {
 ```
 
 ### Implementing insert(String) 
+`insert()` method takes a String `word` and doesn't return anything. We start from the root node and iterate over all the characters of the `word`. 
+
+We check if the node's children array already have that character, if it does, we set our next node to that children `TrieNode`, otherwise we create a new `TrieNode` and set it to the node's children array and also set the next node to that newly created `TrieNode`
+
+And at the end after itrating over all the characters of the input word, we set the node's `isEnd` property to true, since that node marks the end of the word in the `Trie`.
+
 
 ```java
 public void insert(String word) {
