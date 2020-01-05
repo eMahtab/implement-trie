@@ -35,7 +35,7 @@ public class TrieNode {
 }
 ```
 Now lets define the `Trie` class, below is the skeleton of the `Trie` class. Trie class hold the TrieNode which refers to the root of the Trie.
-Note that Trie will be instantiated as `Trie trie = new Trie()`
+Note that Trie will be instantiated as `Trie trie = new Trie()` from outside.
 
 ```java
 public class Trie {
@@ -58,6 +58,9 @@ public class Trie {
     }
 }
 ```
+
+### Implementing insert(String) 
+
 
 ## Implementation :
 
