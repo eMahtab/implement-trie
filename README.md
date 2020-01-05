@@ -34,7 +34,8 @@ public class TrieNode {
 	}
 }
 ```
-Now lets define the Trie class
+Now lets define the `Trie` class, below is the skeleton of the `Trie` class. Trie class hold the TrieNode which refers to the root of the Trie.
+Note that Trie will be instantiated as `Trie trie = new Trie()`
 
 ```java
 public class Trie {
