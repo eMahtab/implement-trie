@@ -86,6 +86,11 @@ public void insert(String word) {
 }
 ```
 
+**💥 👀 💥**
+
+Note how we are checking if the `TrieNode` have a children with the same character. We are not compairing against actual chracater, rather we are checking, is the index pointed by that character is null or not. If its null we know that `TrieNode` doesn't have a children with the same character, otherwise if its not null then we are sure that `TrieNode` have a children with the same character.
+
+
 ## Implementation :
 
 
