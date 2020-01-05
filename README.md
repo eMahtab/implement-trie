@@ -35,7 +35,7 @@ public class TrieNode {
 }
 ```
 Now lets define the `Trie` class, below is the skeleton of the `Trie` class. Trie class hold the TrieNode which refers to the root of the Trie.
-Note that Trie will be instantiated as `Trie trie = new Trie()` from outside.
+Note that Trie will be instantiated as `Trie trie = new Trie()` from outside, so initially all 26 entries in children array will be null for root node, which means initially there won't be any children in `Trie` but just a `TrieNode` root. 
 
 ```java
 public class Trie {
