@@ -90,6 +90,32 @@ public void insert(String word) {
 
 Note how we are checking if the `TrieNode` have a children with the same character. We are not compairing against actual character, rather we are checking, is the index pointed by that character is null or not. If its null we know that `TrieNode` doesn't have a children with the same character, otherwise if its not null then we are sure that `TrieNode` have a children with the same character.
 
+### Implementing search(String) :
+
+```java
+public boolean search(String word) {
+       TrieNode node = searchPrefix(word);
+       return node != null && node.isEnd;
+}
+
+private TrieNode searchPrefix(String word) {
+       TrieNode node = root;
+       for(int i = 0; i < word.length(); i++){
+            char ch = word.charAt(i);
+            int index = ch - 'a';
+            if(node.children[index] != null){
+            	node = node.children[index];
+            } else{
+                return null;
+            }
+        }
+ 
+       if(node == root)
+            return null;
+ 
+       return node;
+}
+```
 
 ## Implementation :
 
