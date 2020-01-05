@@ -34,6 +34,29 @@ public class TrieNode {
 	}
 }
 ```
+Now lets define the Trie class
+
+```java
+public class Trie {
+    private TrieNode root;
+    
+    public Trie() {
+        root = new TrieNode();
+    }
+    
+    public void insert(String word) {
+       
+    }
+   
+    public boolean search(String word) {
+       
+    }
+
+    public boolean startsWith(String prefix) {
+       
+    }
+}
+```
 
 ## Implementation :
 
