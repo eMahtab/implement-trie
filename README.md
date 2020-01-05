@@ -65,7 +65,7 @@ public class Trie {
 
 We check if the node's children array already have that character, if it does, we set our next node to that children `TrieNode`, otherwise we create a new `TrieNode` and set it to the node's children array and also set the next node to that newly created `TrieNode`
 
-And at the end after itrating over all the characters of the input word, we set the node's `isEnd` property to true, since that node marks the end of the word in the `Trie`.
+And at the end after iterating over all the characters of the input word, we set the node's `isEnd` property to true, since that node marks the end of the word in the `Trie`.
 
 
 ```java
