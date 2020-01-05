@@ -35,6 +35,7 @@ public class TrieNode {
 }
 ```
 Now lets define the `Trie` class, below is the skeleton of the `Trie` class. Trie class hold the TrieNode which refers to the root of the Trie.
+
 Note that Trie will be instantiated as `Trie trie = new Trie()` from outside, so initially all 26 entries in children array will be null for root node, which means initially there won't be any children in `Trie` but just a `TrieNode` root. 
 
 ```java
@@ -61,6 +62,23 @@ public class Trie {
 
 ### Implementing insert(String) 
 
+```java
+public void insert(String word) {
+        TrieNode node = root;
+        for(int i = 0; i < word.length(); i++){
+            char ch = word.charAt(i);
+            int index = ch - 'a';
+            if(node.children[index] == null){
+                TrieNode temp = new TrieNode();
+                node.children[index]=temp;
+                node = temp;
+            } else {
+            	node = node.children[index];
+            }
+        }
+        node.isEnd=true;
+}
+```
 
 ## Implementation :
 
