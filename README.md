@@ -82,7 +82,7 @@ public void insert(String word) {
             	node = node.children[index];
             }
         }
-        node.isEnd=true;
+        node.isEnd=true;  // Don't forget this
 }
 ```
 
@@ -164,7 +164,7 @@ class Trie {
                 node.children[ch - 'a'] = new TrieNode();
             node = node.children[ch - 'a'];
         }
-        node.isEnd = true;
+        node.isEnd = true;  // Don't forget this
     }
     
     /** Returns if the word is in the trie. */
